@@ -12,12 +12,12 @@ const SidebarItem = (props: Props) => {
     props.setFilter(props.data.symbol)
   }
   return (
-    <div onClick={onItemClick} className={`${props.active ? 'bg-active border-r-2 border-active-border' : ''} px-4 cursor-pointer`}>
-      <div className='py-4 border-b border-light w-full flex items-start gap-x-2'>
+    <div onClick={onItemClick} className={`${props.active ? 'bg-active md:border-r-2 md:border-active-border' : ''} px-4 cursor-pointer flex-shrink-0`}>
+      <div className={`${props.active ?'border-active-border md:border-light':'border-light'} py-4 border-b w-full flex items-start gap-x-2`}>
         <img className='w-3' src={props.data.iconUrl} alt="" />
         <div className='text-xs text-left font-medium'>
           <div className='text-primary leading-none'>{props.data.symbol}</div>
-          <div className='text-help mt-2'>{props.data.name}</div>
+          <div className='text-help mt-2 hidden md:block'>{props.data.name}</div>
         </div>
       </div>
     </div>

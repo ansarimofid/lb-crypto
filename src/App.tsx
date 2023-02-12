@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <main className='flex'>
+      <main className='flex flex-col-reverse md:flex-row min-h-screen justify-between'>
         {
           error ?
             <div>Something went Wrong</div> :
@@ -31,7 +31,7 @@ function App() {
               <div>Loading...</div> :
               <>
                 {<Sidebar setFilter={setFilter} filter={filter} coins={data?.data.coins} />}
-                {<ItemGridView coins={filteredCoins} />}
+                {<ItemGridView setFilter={setFilter} coins={filteredCoins} />}
               </>
         }
       </main>
