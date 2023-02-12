@@ -1,3 +1,5 @@
+import { Coins } from "./type";
+
 export function getPricefromPercent( price: string,change: string): number {
 
   let rs = (parseFloat(price)*parseFloat(change))/100;
@@ -19,4 +21,9 @@ export function getFormattedNumber(price: string): number {
     return parseFloat(p.toFixed(4))
   }
   return d
+}
+
+export const getFilteredCoins = (coins: Coins, filter:string): Coins => {
+
+  return coins.filter(d=>d.symbol===filter);
 }

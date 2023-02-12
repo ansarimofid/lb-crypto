@@ -7,14 +7,17 @@ import searchIcon from "../../assets/img/search.svg"
 import { Coins } from "../../global/type"
 
 interface SidebarProps {
-  coins: Coins
+  coins: Coins | undefined,
+  filter: string,
+  setFilter:(filter:string) => void
 }
 
 const Sidebar = (props: SidebarProps) => {
 
   console.log(props, "Props")
   return (
-    <div className='w-64 bg-white border-r border-light min-h-screen h-screen sticky top-0 overflow-y-auto'>
+    <div
+      className={`w-64 bg-white border-r border-light min-h-screen h-screen sticky top-0 overflow-y-auto`}>
       <div className='sticky top-0 bg-white py-4 border-b border-light'>
         <div className='px-4 flex gap-x-2'>
           <img src={backIcon} alt="" />
@@ -30,7 +33,9 @@ const Sidebar = (props: SidebarProps) => {
       </div>
 
       <div className='mt-4'>
-        {props.coins.map(d => (<SidebarItem data={d} key={d.uuid} />))}
+        {props.coins && props.coins.map(d => (
+          <SidebarItem setFilter={props.setFilter} active={props.filter===d.symbol?true:false} data={d} key={d.uuid} />
+        ))}
       </div>
     </div>
   )

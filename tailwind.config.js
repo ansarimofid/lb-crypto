@@ -17,7 +17,8 @@ module.exports = {
         'dark':'#D1D5DA',
         'lb-gray-025':'#FAFBFC',
         'lb-gray-500':'#6A737D',
-        'active':'#5D6BCE'
+        'active':'#F5F7FF',
+        'active-border': '#5D6BCE'
       }
     },
   },

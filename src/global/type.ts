@@ -12,7 +12,7 @@ export type Coins = Array<Coin>
 
 export interface ApiResponse {
   status: string,
-  data: { stats: string, coins: Array<Coin> }
+  data: { stats: string, coins: Coins }
 }
 
 export interface TsCoinAvatar {

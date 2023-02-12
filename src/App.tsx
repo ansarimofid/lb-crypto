@@ -1,45 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 
-import { Coin, ApiResponse } from "./global/type"
 
 import Sidebar from "./components/common/Sidebar"
 import ItemGridView from "./views/ItemGridView";
 
+import { useGetAllCoinsQuery } from './services/coins';
+
+import { getFilteredCoins } from "./global/util"
+
 function App() {
 
-  const [data, setData] = useState<{ coins: Array<Coin> }>()
+  const { data, error, isLoading } = useGetAllCoinsQuery('');
 
-  let baseUrl = "https://api.coinranking.com/v2";
+  const [filter, setFilter] = useState<string>('');
 
-  const options = {
-    headers: {
-      'Content-Type': 'application/json',
-      'x-access-token': process.env.REACT_APP_API_KEY,
-    },
-  };
-
-  async function fetchData() {
-    let rs = await fetch(`${baseUrl}/coins`);
-    // setData(rs.data)
-    let jsonRes: ApiResponse = await rs.json();
-    setData({ coins: jsonRes.data.coins })
-
-    //rws.json().
-    //{status:string, data:{stats, coins}}
-  }
-
-  useEffect(() => {
-    console.log(process.env)
-    let data = fetchData();
-    console.log("data", data)
-  }, [1])
+  const filteredCoins = data && filter ? getFilteredCoins(data?.data.coins, filter) : data ? data?.data.coins : []
 
   return (
     <div className="App">
       <main className='flex'>
-        {data && <Sidebar coins={data.coins} />}
-        {data && <ItemGridView coins={data.coins} />}
+        {
+          error ?
+            <div>Something went Wrong</div> :
+            isLoading ?
+              <div>Loading...</div> :
+              <>
+                {<Sidebar setFilter={setFilter} filter={filter} coins={data?.data.coins} />}
+                {<ItemGridView coins={filteredCoins} />}
+              </>
+        }
       </main>
     </div>
   );
