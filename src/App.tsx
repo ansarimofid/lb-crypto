@@ -7,14 +7,19 @@ import ItemGridView from "./views/ItemGridView";
 import { useGetAllCoinsQuery } from './services/coins';
 
 import { getFilteredCoins } from "./global/util"
+import { Coins } from './global/type';
 
 function App() {
 
   const { data, error, isLoading } = useGetAllCoinsQuery('');
 
   const [filter, setFilter] = useState<string>('');
+  const [filteredCoins, setFilteredCoins] = useState<Coins>();
 
-  const filteredCoins = data && filter ? getFilteredCoins(data?.data.coins, filter) : data ? data?.data.coins : []
+  useEffect(() => {
+    let filteredCoins = data && filter ? getFilteredCoins(data?.data.coins, filter) : data ? data?.data.coins : []
+    setFilteredCoins(filteredCoins)
+  }, [filter, data])
 
   return (
     <div className="App">
