@@ -44,3 +44,19 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+///
+
+1) Stay close to look and feel of the mockup.  ✅
+
+2) The left panel is scrollable and list Cryptos,  on selecting a row from left list only corresponding card shows for ex: If you select Bitcoin from left only Bitcoin card shows on the right.
+
+3) Take real / mock data. ✅
+
+4) Code should be simple, readable and robust. 
+
+5)  Assignment should be done using React, Redux-toolkit and Typescript. You are free to use any CSS component library.
+
+6) Use of GraphQL and test cases will be a plus.
+
+7) Handle API loading state and empty state handling

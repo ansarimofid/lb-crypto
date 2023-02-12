@@ -12,9 +12,11 @@ module.exports = {
         help:'#6A737D',
         'help-light':'#959DA5',
         success:'#8BC34A',
+        danger:'#DB4949',
         'light':'#E1E4E8',
         'dark':'#D1D5DA',
-        'gray-025':'#FAFBFC',
+        'lb-gray-025':'#FAFBFC',
+        'lb-gray-500':'#6A737D',
         'active':'#5D6BCE'
       }
     },
