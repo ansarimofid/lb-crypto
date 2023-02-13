@@ -1,6 +1,6 @@
 import React from 'react'
 import { Coins } from "../global/type"
-import ItemCard from '../components/itemcard/ItemCard'
+import ItemCard from '../components/item/ItemCard'
 
 import backIcon from "../assets/img/arrow-left.svg"
 import btcIcon from "../assets/img/bitcoinsvg.svg"

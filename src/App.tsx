@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from "./components/navigation/Sidebar/Sidebar"
 import SidebarSkeleton from "./components/skeleton/SidebarSkeleton"
 
-import ItemGridView from "./views/ItemGridView";
+import ItemGridView from "./view/ItemGridView";
 import ContentSkeleton from "./components/skeleton/ContentSkeleton"
 
 //Redux action import
