@@ -1,3 +1,4 @@
+//Coin Interface
 export interface Coin {
   name: string,
   uuid: string,
@@ -8,13 +9,16 @@ export interface Coin {
   color: string
 }
 
+//Coins Type (Array of coin)
 export type Coins = Array<Coin>
 
+//API response Interface
 export interface ApiResponse {
   status: string,
   data: { stats: string, coins: Coins }
 }
 
+// Coin Avatar Interface
 export interface TsCoinAvatar {
   color: string, iconUrl: string
 }

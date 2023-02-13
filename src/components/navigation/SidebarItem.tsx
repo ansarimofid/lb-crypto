@@ -8,6 +8,7 @@ type Props = {
 
 const SidebarItem = (props: Props) => {
 
+  //Filters item on right column when items are clicked
   const onItemClick = () => {
     props.setFilter(props.data.symbol)
   }

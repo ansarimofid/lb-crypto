@@ -1,8 +1,7 @@
 import React from 'react'
 
-type Props = {}
-
-const ContentSkeleton = (props: Props) => {
+// Right side content skeleton 
+const ContentSkeleton = () => {
   return (
     <div className='mb-10 w-full'>
       <div className='rounded h-8 mx-6 z-10 animate-pulse bg-slate-200 sticky top-0 md:static flex items-center gap-x-2 my-4 md:mt-4 md:mb-0'>
