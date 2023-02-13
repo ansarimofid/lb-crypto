@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Component Import
-import Sidebar from "./components/navigation/Sidebar"
+import Sidebar from "./components/navigation/Sidebar/Sidebar"
 import SidebarSkeleton from "./components/skeleton/SidebarSkeleton"
 
 import ItemGridView from "./views/ItemGridView";

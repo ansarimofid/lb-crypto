@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import SidebarItem from "./SidebarItem"
+import SidebarItem from "../Sidebar/SidebarItem"
 
-import backIcon from "../../assets/img/arrow-left.svg"
-import searchIcon from "../../assets/img/search.svg"
+import backIcon from "../../../assets/img/arrow-left.svg"
+import SidebarSearchInput from './SidebarSearchInput'
 
-import { Coins } from "../../global/type"
-import { getSearchedCoins } from '../../global/util'
+import { Coins } from "../../../global/type"
+import { getSearchedCoins } from '../../../global/util'
 
 interface SidebarProps {
   coins: Coins | undefined,
@@ -25,8 +25,7 @@ const Sidebar = (props: SidebarProps) => {
   const [coinList, setCoinList] = useState<Coins>();
 
   //Sets search state on input change
-  const handleSearch = (e: { target: { value: string } }) => {
-    let value = e.target.value;
+  const handleSearch = (value: string) => {
     setSearch(value);
   }
 
@@ -50,10 +49,7 @@ const Sidebar = (props: SidebarProps) => {
 
         {/* Search Button */}
         <div className='px-4 mt-4'>
-          <div className='border border-dark py-2 px-3.5 flex rounded gap-x-2'>
-            <img src={searchIcon} alt="" />
-            <input value={search} onChange={handleSearch} className='focus:outline-none w-full text-xs' placeholder='Search' type="text" />
-          </div>
+          <SidebarSearchInput handleSearch={handleSearch} />
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { Coins } from "../global/type"
 import ItemCard from "../components/itemcard"
 
 import backIcon from "../assets/img/arrow-left.svg"
+import btcIcon from "../assets/img/bitcoinsvg.svg"
 
 type Props = {
   coins: Coins | undefined,
@@ -21,6 +22,7 @@ const ItemGridView = (props: Props) => {
       {/* //Header with back button(on mobile) and title */}
       <div className='px-6 z-10 bg-white sticky top-0 md:static flex items-center gap-x-2 py-4 md:pt-4 md:pb-0 border-b md:border-b-0 border-light'>
         <img onClick={resetFilter} className="cursor-pointer md:hidden" src={backIcon} alt="" />
+        <img className='hidden md:inline-block w-4 h-4' src={btcIcon} alt="Bitcoin" />
         <h2 className='text-primary text-base font-semibold'> My Cryptos</h2>
       </div>
 

@@ -1,62 +1,17 @@
-# Getting Started with Create React App
+# Crypto Assignment
+This project was created as per requirements mentioned in the assigment.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Technologies used
+1. React
+2. Typescript
+3. Redux toolkit
+4. Tailwind
 
-## Available Scripts
+### API used
+Coinranking
+https://developers.coinranking.com/api
 
-In the project directory, you can run:
+Addional Improvements
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-///
-
-1) Stay close to look and feel of the mockup.  ✅
-
-2) The left panel is scrollable and list Cryptos,  on selecting a row from left list only corresponding card shows for ex: If you select Bitcoin from left only Bitcoin card shows on the right.
-
-3) Take real / mock data. ✅
-
-4) Code should be simple, readable and robust. 
-
-5)  Assignment should be done using React, Redux-toolkit and Typescript. You are free to use any CSS component library.
-
-6) Use of GraphQL and test cases will be a plus.
-
-7) Handle API loading state and empty state handling
+1. App was made mobile and tablet responsive ny implementing the missing mobile UI/UX
+2. Empty API loading State was implemented
