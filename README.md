@@ -16,7 +16,7 @@ This project was created as per the requirements mentioned in the assigment.
 Coinranking
 https://developers.coinranking.com/api
 
-Addional Improvements
+### Addional Improvements
 
 1. App was made mobile and tablet responsive by implementing the missing mobile UI/UX
 
