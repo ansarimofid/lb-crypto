@@ -16,7 +16,7 @@ const PriceChangeTicker = (props: Props) => {
   let change = parseFloat(coin.change);
 
   return (
-    <div className={`text-lg font-semibold flex items-baseline gap-x-1 ${change == 0 ? 'text-yellow-400' : change > 0 ? 'text-success' : 'text-danger'}`}>
+    <div className={`text-lg font-semibold flex items-baseline gap-x-1 ${change === 0 ? 'text-yellow-400' : change > 0 ? 'text-success' : 'text-danger'}`}>
       <span>${changePrice}</span>
       <span className='text-xs'>({coin.change}%)</span>
 
