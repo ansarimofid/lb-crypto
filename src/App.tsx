@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 
 import Sidebar from "./components/common/Sidebar"
+import SidebarSkeleton from "./components/skeleton/SidebarSkeleton"
+
 import ItemGridView from "./views/ItemGridView";
+import ContentSkeleton from "./components/skeleton/ContentSkeleton"
 
 import { useGetAllCoinsQuery } from './services/coins';
 
@@ -21,6 +24,10 @@ function App() {
     setFilteredCoins(filteredCoins)
   }, [filter, data])
 
+  // const getDummyCard() {
+  //   for(let i=0;i<20;i++)
+  // }
+
   return (
     <div className="App">
       <main className='flex flex-col-reverse md:flex-row min-h-screen justify-between'>
@@ -28,7 +35,10 @@ function App() {
           error ?
             <div>Something went Wrong</div> :
             isLoading ?
-              <div>Loading...</div> :
+              <>
+                <SidebarSkeleton />
+                <ContentSkeleton />
+              </> :
               <>
                 {<Sidebar setFilter={setFilter} filter={filter} coins={data?.data.coins} />}
                 {<ItemGridView setFilter={setFilter} coins={filteredCoins} />}
