@@ -36,7 +36,7 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <div
       className={`md:w-64 bg-white border-r border-light md:min-h-screen h-12 md:h-screen sticky z-10 bottom-0 md:top-0 overflow-y-hidden md:overflow-y-auto flex-shrink-0 w-full overflow-x-hidden`}>
-      <div className='hidden md:block sticky top-0 bg-white py-4 border-b border-light'>
+      <div className='hidden md:block sticky top-0 bg-white py-4'>
         <div className='px-4 flex gap-x-2'>
           <img onClick={resetFilter} className="cursor-pointer" src={backIcon} alt="" />
           <span className='text-secondary'>Cryptos</span>

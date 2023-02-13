@@ -33,7 +33,7 @@ function App() {
       <main className='flex flex-col-reverse md:flex-row min-h-screen justify-between'>
         {
           error ?
-            <div>Something went Wrong</div> :
+            <div className='text-center'>Something went Wrong! Please refresh the page.</div> :
             isLoading ?
               <>
                 <SidebarSkeleton />
